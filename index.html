@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <title>Menu</title>
+    <style>
+        :root {
+            /* iOS Light Mode Colors */
+            --bg-color: #F2F2F7;
+            --card-bg: #FFFFFF;
+            --text-primary: #000000;
+            --text-secondary: #8E8E93;
+            --separator-color: rgba(60, 60, 67, 0.12);
+            --accent-color: #007AFF;
+            --padding-safe: env(safe-area-inset-bottom, 20px);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                /* iOS Dark Mode Colors */
+                --bg-color: #000000;
+                --card-bg: #1C1C1E;
+                --text-primary: #FFFFFF;
+                --text-secondary: #8E8E93;
+                --separator-color: rgba(84, 84, 88, 0.65);
+                --accent-color: #0A84FF;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 680px;
+            padding: 60px 20px;
+            padding-bottom: calc(40px + var(--padding-safe));
+        }
+
+        header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin: 0 0 8px 0;
+            color: var(--text-primary);
+        }
+
+        .subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin: 0;
+        }
+
+        /* Card List Style */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            margin-bottom: 24px;
+            overflow: hidden; /* Ensures rounded corners clip content */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            color: var(--text-primary);
+            position: relative;
+            transition: background-color 0.2s;
+        }
+
+        /* Tap highlight effect for iOS feel */
+        .menu-item:active {
+            background-color: var(--separator-color);
+        }
+
+        /* Separator lines */
+        .menu-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+            right: 0;
+            height: 0.5px;
+            background-color: var(--separator-color);
+        }
+
+        .item-label {
+            font-size: 17px;
+            font-weight: 400;
+        }
+
+        .item-icon {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+        }
+
+        .chevron {
+            width: 8px;
+            height: 13px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .version {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-top: 40px;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container fade-in">
+        <header>
+            <!-- Replace [App Name] with your actual app name -->
+            <h1>Nadya Publishing</h1>
+            <p class="subtitle">Legal & Support</p>
+        </header>
+
+        <div class="card">
+            <a href="privacy_policy.html" class="menu-item">
+                <span class="item-label">Privacy Policy</span>
+                <span class="item-icon">
+                    <svg class="chevron" viewBox="0 0 8 13">
+                        <path d="M1 1L6 6.5L1 12" />
+                    </svg>
+                </span>
+            </a>
+            <a href="terms.html" class="menu-item">
+                <span class="item-label">Terms and Conditions</span>
+                <span class="item-icon">
+                    <svg class="chevron" viewBox="0 0 8 13">
+                        <path d="M1 1L6 6.5L1 12" />
+                    </svg>
+                </span>
+            </a>
+            <a href="contact_us.html" class="menu-item">
+                <span class="item-label">Support</span>
+                <span class="item-icon">
+                    <svg class="chevron" viewBox="0 0 8 13">
+                        <path d="M1 1L6 6.5L1 12" />
+                    </svg>
+                </span>
+            </a>
+        </div>
+
+        <footer class="version">
+            Version 1.0.0
+        </footer>
+    </div>
+
+</body>
+</html>
