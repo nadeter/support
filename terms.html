@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <title>Privacy Policy</title>
+    <style>
+        :root {
+            /* iOS Light Mode Colors */
+            --bg-color: #F2F2F7;
+            --card-bg: #FFFFFF;
+            --text-primary: #000000;
+            --text-secondary: #8E8E93;
+            --separator-color: rgba(60, 60, 67, 0.12);
+            --accent-color: #007AFF;
+            --padding-safe: env(safe-area-inset-bottom, 20px);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                /* iOS Dark Mode Colors */
+                --bg-color: #000000;
+                --card-bg: #1C1C1E;
+                --text-primary: #FFFFFF;
+                --text-secondary: #8E8E93;
+                --separator-color: rgba(84, 84, 88, 0.65);
+                --accent-color: #0A84FF;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            /* Critical for iOS devices to clear the bottom swipe bar */
+            padding-bottom: calc(40px + var(--padding-safe));
+        }
+
+        header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin: 0 0 8px 0;
+            color: var(--text-primary);
+        }
+
+        .effective-date {
+            font-size: 15px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04); /* Subtle shadow for depth */
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0 0 12px 0;
+            color: var(--text-primary);
+        }
+
+        p {
+            font-size: 16px;
+            margin: 0 0 16px 0;
+            color: var(--text-primary);
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            margin: 10px 0 16px 0;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: var(--text-primary);
+        }
+
+        .subtle {
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Animation */
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container fade-in">
+        <header>
+            <h1>Privacy Policy</h1>
+            <div class="effective-date">Effective Date: <span id="current-date"></span></div>
+        </header>
+
+        <div class="card">
+            <section>
+                <h2>1. Introduction</h2>
+                <p>We believe that your personal data belongs to you. Our app is built with a privacy-first architecture. This policy explains how we handle information in our "Freemium" model.</p>
+            </section>
+        </div>
+
+        <div class="card">
+            <section>
+                <h2>2. Data Collection and Storage</h2>
+                <p>The core principle of our app is that we do not collect, store, or transmit any personal data to external servers.</p>
+                <ul>
+                    <li><strong>Local Storage:</strong> All data you create is stored exclusively on your device.</li>
+                    <li><strong>No Accounts:</strong> You do not need to create an account to use the app.</li>
+                    <li><strong>No Tracking:</strong> We do not use third-party trackers or analytics that identify you.</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="card">
+            <section>
+                <h2>3. Data Control and Deletion</h2>
+                <p>Since all data remains on your device, you have full control:</p>
+                <ul>
+                    <li>You can modify or delete your data at any time within the app.</li>
+                    <li>Deleting the app from your device will automatically erase all data associated with it.</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="card">
+            <section>
+                <h2>4. Apple’s Services (Freemium Model)</h2>
+                <p>To provide "Freemium" features, we use Apple’s standard services:</p>
+                <ul>
+                    <li><strong>In-App Purchases:</strong> All transactions are processed by Apple via the App Store. We do not have access to your credit card information or billing details.</li>
+                    <li><strong>iCloud (Optional):</strong> If you enable iCloud sync, your data is stored in your private Apple iCloud account. We cannot access this data.</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="card">
+            <section>
+                <h2>5. Third-Party Links</h2>
+                <p>The app may contain links to the App Store for ratings or to our support page. We are not responsible for the privacy practices of external sites.</p>
+            </section>
+        </div>
+
+        <div class="card">
+            <section>
+                <h2>6. Changes to This Policy</h2>
+                <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with a new "Effective Date."</p>
+            </section>
+        </div>
+
+        <div class="card">
+            <section>
+                <h2>7. Contact Us</h2>
+                <p>If you have any questions, please contact us at:<br>
+                <a href="mailto:nttechsup+privacy@gmail.com">nttechsup+privacy@gmail.com</a></p>
+            </section>
+        </div>
+        
+        <footer style="text-align: center; margin-top: 20px;">
+            <p class="subtle">All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Automatically set today's date
+        const dateElement = document.getElementById('current-date');
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const today = new Date();
+        dateElement.textContent = today.toLocaleDateString('en-US', options);
+    </script>
+
+</body>
+</html>
