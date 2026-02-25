@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <title>Support</title>
+    <style>
+        :root {
+            --bg-color: #F2F2F7; --card-bg: #FFFFFF; --text-primary: #000000;
+            --text-secondary: #8E8E93; --separator-color: rgba(60, 60, 67, 0.12);
+            --accent-color: #007AFF; --padding-safe: env(safe-area-inset-bottom, 20px);
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #000000; --card-bg: #1C1C1E; --text-primary: #FFFFFF;
+                --text-secondary: #8E8E93; --separator-color: rgba(84, 84, 88, 0.65);
+                --accent-color: #0A84FF;
+            }
+        }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body {
+            margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color); color: var(--text-primary);
+            line-height: 1.5; -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 680px; margin: 0 auto; padding: 40px 20px;
+            padding-bottom: calc(40px + var(--padding-safe));
+        }
+        header { margin-bottom: 40px; text-align: center; }
+        h1 { font-size: 34px; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 8px 0; }
+        .subtitle { font-size: 17px; color: var(--text-secondary); }
+        .card {
+            background-color: var(--card-bg); border-radius: 12px; padding: 24px;
+            margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+        h2 { font-size: 20px; font-weight: 600; margin: 0 0 16px 0; }
+        p { font-size: 16px; margin: 0 0 12px 0; }
+        p:last-child { margin-bottom: 0; }
+        .faq-item { margin-bottom: 20px; }
+        .faq-item:last-child { margin-bottom: 0; }
+        .faq-q { font-weight: 600; color: var(--text-primary); display: block; margin-bottom: 4px; }
+        .faq-a { color: var(--text-secondary); line-height: 1.4; }
+        a { color: var(--accent-color); text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+        .fade-in { animation: fadeIn 0.6s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <div class="container fade-in">
+        <header>
+            <h1>Support</h1>
+            <p class="subtitle">How can we help?</p>
+        </header>
+
+        <div class="card">
+            <section>
+                <p>Welcome to the support page for [Название вашего приложения]. We are committed to providing a simple and privacy-focused experience.</p>
+            </section>
+        </div>
+
+        <div class="card">
+            <section>
+                <h2>2. Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <span class="faq-q">Where is my data stored?</span>
+                    <span class="faq-a">All your data is stored locally on your device. We do not have access to it.</span>
+                </div>
+
+                <div class="faq-item">
+                    <span class="faq-q">How do I delete my data?</span>
+                    <span class="faq-a">You can delete your data directly within the app or by uninstalling the app from your device.</span>
+                </div>
+
+                <div class="faq-item">
+                    <span class="faq-q">I have a problem with a purchase.</span>
+                    <span class="faq-a">Since all transactions are handled by Apple, please visit <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a> for billing issues or refund requests.</span>
+                </div>
+            </section>
+        </div>
+
+        <div class="card">
+            <section>
+                <h2>3. Contact Us</h2>
+                <p>If you found a bug, have a feature suggestion, or need technical assistance, please reach out:</p>
+                <p>
+                    <strong>Email:</strong> <a href="mailto:nttechsup+support@gmail.com">nttechsup+support@gmail.com</a><br>
+                    <strong>Response Time:</strong> <span class="faq-a">We usually respond within 48 hours.</span>
+                </p>
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>
